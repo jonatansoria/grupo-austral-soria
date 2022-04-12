@@ -10,7 +10,7 @@ body{
 .linea-color
 {
     background-image: linear-gradient(to right, red ,#00b4d8, orange, green); 
-    height:4px ;
+    height:5px ;
 }
 
 .fondo{
@@ -26,8 +26,8 @@ body{
 .color-texto:hover{
     color:black;
     margin: 2px ;
-    background-color: aqua;
-    transform: translate(1px,50px);
+    background-color: #e6ccb2;
+    transform: translate(2px,30px);
 
 }
 
@@ -39,7 +39,9 @@ body{
     justify-content: space-evenly;
     margin-left: 1px;
     background-color: #ffe8d6; 
+    transition: all 2s;
 }
+
 
 .card-animacion{
     display: grid;
@@ -47,7 +49,11 @@ body{
     margin-left: 1px;
     background-color: #ffe8d6; 
     }
-
+    .card-animacion:hover{
+        background-color: black;
+        color: white;
+        transform: translatey(2px);
+     }
 
 .whatsapp{
     position: fixed;
@@ -67,8 +73,13 @@ footer{
 .logo{
     width:130px; 
     height:50px;
-    
+    animation-name:logo-ga;
+    animation-iteration-count:2;
+    animation-timing-function:ease-in;
+    animation-duration: 5s;
+    animation-delay: 3s ;
 }
-
-
-
+@keyframes logo-ga{
+    from{width:250px;}
+     
+}
