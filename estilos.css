@@ -15,7 +15,14 @@ body{
 
 .fondo{
     background-color: black;
-    font-weight: bold;
+    color: white;
+    padding-left: 40px;
+    align-content: center;
+}
+
+.desplegable{
+    background-color: #ffe8d6;
+    font-style: oblique;
 }
 
 .color-texto{
@@ -84,11 +91,11 @@ footer{
     animation-name:logo-ga;
     animation-iteration-count:1;
     animation-timing-function:ease-in;
-    animation-duration: 5s;
-    animation-delay: 3s ;
+    animation-duration: 3s;
+    animation-delay: 1s ;
 }
 @keyframes logo-ga{
-    from{width:200px;}}
+    from{width:150px;}}
 
     .sub-logo{
         width:130px; 
