@@ -2,6 +2,8 @@
 
 $color-fondo:black;
 $color-pagina:#ffe8d6;
+$tamano:150px;
+$color-texto:black;
 
 .linea-color
 {
@@ -34,16 +36,59 @@ header{
     color:black;
     margin: 2px ;
     background-color: #fbc4ab;
-    transform: translate(2px,30px);
+    transform: translate(2px,5px);
   
+  }
+
+  /*extend*/
+.nuetras-marcas{
+
+  @extend.color-texto;
+  border-radius:0;
+  transition: none;
+}
+
+/*maps*/
+$areas:(construccion:red,maquinaria:#00b4d8,decoracion:orange,textil:green);
+$colores:(red,#00b4d8,orange,green);
+
+
+@each $clave,$valor in $areas {
+  .btn-#{$clave}{
+    background-color: $valor;
+  }
+}
+/*-----------*/
+.boton{
+  color: $color-texto;
+  width: $tamano;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 3px;
+  margin: 5px;
+  padding: 5px;
+  &:hover{font-weight: bold; color: white;}
+}
+
+  .banner{
+    width: 100%;
+    padding-bottom:20px;
   }
   
   .local{
-    border-radius:50% ;
-  }
+    border-radius:50% ;}
+
+/*extend*/
+.local-deco{
+@extend.local;
+width: 300px;
+height: 200px;
+}
+/*-------*/
   .card{
     display: grid;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-left: 1px;
     background-color: $color-pagina; 
     transition: all 2s;
@@ -58,15 +103,22 @@ header{
         color:black;
         transform: translatey(2px);
      }
-  
+       /*mixin*/
+
+    @mixin btn-wasp ($width,$height,$right,$bottom){
+
+      width: $width;
+      height:$height;
+      right:$right;
+      bottom:$bottom;
+    }
+      
   .whatsapp{
+     @include btn-wasp(50px,50px,50px,50px);
     position: fixed;
-    bottom:50px;
-    right:50px;
-    width:50px;
-    height:50px;
-    z-index:2;}
-  
+    z-index:2;
+  }
+  /*-------------*/
     .galeria{
         width: 100%;
         height:250px;

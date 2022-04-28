@@ -1,0 +1,67 @@
+* { margin: 0; padding: 0; }
+
+body { background-color: #ffe8d6; }
+
+.linea-color { background-image: -webkit-gradient(linear, left top, right top, from(red), color-stop(#00b4d8), color-stop(orange), to(green)); background-image: linear-gradient(to right, red, #00b4d8, orange, green); height: 5px; }
+
+header { background-color: black; }
+
+.fondo { color: white; padding-left: 40px; -ms-flex-line-pack: center; align-content: center; text-decoration: none; }
+
+.fondo:hover { font-weight: bold; color: white; }
+
+.desplegable { background-color: #ffe8d6; font-style: oblique; }
+
+.color-texto, .nuetras-marcas { color: black; margin: 2px; border-radius: 50%; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-transition: all 2s; transition: all 2s; }
+
+.color-texto:hover, .nuetras-marcas:hover { color: black; margin: 2px; background-color: #fbc4ab; -webkit-transform: translate(2px, 5px); transform: translate(2px, 5px); }
+
+/*extend*/
+.nuetras-marcas { border-radius: 0; -webkit-transition: none; transition: none; }
+
+/*maps*/
+.btn-construccion { background-color: red; }
+
+.btn-maquinaria { background-color: #00b4d8; }
+
+.btn-decoracion { background-color: orange; }
+
+.btn-textil { background-color: green; }
+
+/*-----------*/
+.boton { color: black; width: 150px; text-decoration: none; text-align: center; font-weight: bold; border-radius: 3px; margin: 5px; padding: 5px; }
+
+.boton:hover { font-weight: bold; color: white; }
+
+.banner { width: 100%; padding-bottom: 20px; }
+
+.local, .local-deco { border-radius: 50%; }
+
+/*extend*/
+.local-deco { width: 300px; height: 200px; }
+
+/*-------*/
+.card { display: -ms-grid; display: grid; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin-left: 1px; background-color: #ffe8d6; -webkit-transition: all 2s; transition: all 2s; }
+
+.card-animacion { margin-left: 1px; }
+
+.card-animacion:hover { background-color: #fbc4ab; color: black; -webkit-transform: translatey(2px); transform: translatey(2px); }
+
+/*mixin*/
+.whatsapp { width: 50px; height: 50px; right: 50px; bottom: 50px; position: fixed; z-index: 2; }
+
+/*-------------*/
+.galeria { width: 100%; height: 250px; padding: 25px; }
+
+footer { display: -ms-grid; display: grid; -ms-grid-columns: auto; grid-template-columns: auto; -ms-grid-rows: 150px; grid-template-rows: 150px; justify-items: center; }
+
+.logo { width: 130px; height: 50px; -webkit-animation-name: logo-ga; animation-name: logo-ga; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-timing-function: ease-in; animation-timing-function: ease-in; -webkit-animation-duration: 3s; animation-duration: 3s; -webkit-animation-delay: 1s; animation-delay: 1s; }
+
+@-webkit-keyframes logo-ga { from { width: 150px; } }
+
+@keyframes logo-ga { from { width: 150px; } }
+
+.sub-logo { width: 130px; height: 50px; }
+
+.altura { width: 100%; height: 600px; }
+/*# sourceMappingURL=estilos.css.map */
