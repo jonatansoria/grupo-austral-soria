@@ -1,13 +1,10 @@
 @import "estructura";
-
-$color-fondo:black;
-$color-pagina:#ffe8d6;
-$tamano:150px;
-$color-texto:black;
+@import "variables";
+@import "logos";
 
 .linea-color
 {
-    background-image: linear-gradient(to right, red ,#00b4d8, orange, green); 
+    background-image: $linea-colores; 
     height:5px ;}
 
 
@@ -25,14 +22,14 @@ header{
     background-color: $color-pagina;
     font-style: oblique;
      }
-  .color-texto{
+.color-texto{
     color:black;
     margin: 2px ;
     border-radius: 50%;
     align-items: center;
     transition: all 2s;
   }
-  .color-texto:hover{
+.color-texto:hover{
     color:black;
     margin: 2px ;
     background-color: #fbc4ab;
@@ -49,8 +46,8 @@ header{
 }
 
 /*maps*/
-$areas:(construccion:red,maquinaria:#00b4d8,decoracion:orange,textil:green);
-$colores:(red,#00b4d8,orange,green);
+ $areas:(construccion:red,maquinaria:#00b4d8,decoracion:orange,textil:green);
+ $colores:(red,#00b4d8,orange,green);
 
 
 @each $clave,$valor in $areas {
@@ -71,84 +68,80 @@ $colores:(red,#00b4d8,orange,green);
   &:hover{font-weight: bold; color: white;}
 }
 
-  .banner{
+.banner{
     width: 100%;
     padding-bottom:20px;
   }
-  
-  .local{
+.local{
     border-radius:50% ;}
 
 /*extend*/
 .local-deco{
-@extend.local;
-width: 300px;
-height: 200px;
+   @extend.local;
+   width: 300px;
+   height: 200px;
 }
 /*-------*/
-  .card{
+.card{
     display: grid;
     justify-content: center;
     margin-left: 1px;
     background-color: $color-pagina; 
     transition: all 2s;
   }
-  
-  
-  .card-animacion{
+.card-animacion{
     margin-left: 1px;
     }
-    .card-animacion:hover{
+.card-animacion:hover{
         background-color: #fbc4ab;
         color:black;
         transform: translatey(2px);
      }
        /*mixin*/
 
-    @mixin btn-wasp ($width,$height,$right,$bottom){
+@mixin btn-wasp ($width,$height,$right,$bottom){
 
       width: $width;
       height:$height;
       right:$right;
       bottom:$bottom;
     }
-      
-  .whatsapp{
+.whatsapp{
      @include btn-wasp(50px,50px,50px,50px);
     position: fixed;
     z-index:2;
   }
   /*-------------*/
-    .galeria{
+.galeria{
         width: 100%;
         height:250px;
         padding: 25px;
     }
   
-  footer{
+footer{
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 150px;
     justify-items:center ;
   }
   
-  .logo{
-    width:130px; 
-    height:50px;
+.logo{
+    width:$logos-ancho; 
+    height:$logos-alto;
     animation-name:logo-ga;
     animation-iteration-count:1;
     animation-timing-function:ease-in;
     animation-duration: 3s;
     animation-delay: 1s ;
   }
-  @keyframes logo-ga{
+@keyframes logo-ga{
     from{width:150px;}}
   
-    .sub-logo{
-        width:130px; 
-        height:50px;}
+.sub-logo{
+        width:$logos-ancho; 
+        height:$logos-alto;}
      
-  .altura {
+.altura {
     width: 100%;
     height: 600px;
   }
