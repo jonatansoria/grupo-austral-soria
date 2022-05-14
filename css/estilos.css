@@ -6,7 +6,7 @@ body { background-color: #ffe8d6; }
 
 header { background-color: black; }
 
-.fondo { color: white; padding-left: 40px; -ms-flex-line-pack: center; align-content: center; text-decoration: none; }
+.fondo { color: white; padding-left: 40px; -ms-flex-line-pack: center; align-content: center; text-decoration: none; font-size: x-large; }
 
 .fondo:hover { font-weight: bold; color: white; }
 
@@ -53,8 +53,6 @@ header { background-color: black; }
 /*-------------*/
 .galeria { width: 100%; height: 250px; padding: 25px; }
 
-footer { display: -ms-grid; display: grid; -ms-grid-columns: auto; grid-template-columns: auto; -ms-grid-rows: 150px; grid-template-rows: 150px; justify-items: center; }
-
 .logo { width: 130px; height: 50px; -webkit-animation-name: logo-ga; animation-name: logo-ga; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-timing-function: ease-in; animation-timing-function: ease-in; -webkit-animation-duration: 3s; animation-duration: 3s; -webkit-animation-delay: 1s; animation-delay: 1s; }
 
 @-webkit-keyframes logo-ga { from { width: 150px; } }
@@ -64,4 +62,23 @@ footer { display: -ms-grid; display: grid; -ms-grid-columns: auto; grid-template
 .sub-logo { width: 130px; height: 50px; }
 
 .altura { width: 100%; height: 600px; }
+
+.pie-pagina { width: auto; background-color: black; }
+
+.pie-pagina .grupo-1 { width: auto; margin: auto; display: -ms-grid; display: grid; -ms-grid-columns: auto auto; grid-template-columns: auto auto; grid-gap: 30px; }
+
+.pie-pagina .grupo-1 .box .figure { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: start; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.pie-pagina .grupo-1 .box h2 { color: #fff; margin-bottom: 25px; font-size: 20px; }
+
+.pie-pagina .grupo-1 .red-social { text-decoration: none; width: 45px; height: 45px; line-height: 45px; color: #fff; margin-right: 20px; background-color: #0d2033; text-align: center; }
+
+.pie-pagina .grupo-1 .red-social a:hover { color: aqua; }
+
+.pie-pagina .grupo-2 { text-align: center; color: #fff; }
+
+.pie-pagina .grupo-2 small { font-size: 15px; }
+
+@media screen and (max-width: 800px) { .pie-pagina .grupo-1 { width: auto; -ms-grid-columns: auto; grid-template-columns: auto; grid-gap: 30px; padding: 35px 0px; }
+  .pie-pagina .grupo-1 .box figure { width: auto; } }
 /*# sourceMappingURL=estilos.css.map */
